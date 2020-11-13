@@ -1,0 +1,27 @@
+<html>
+<head>
+</head>
+<body>
+<p>The result of my function for what object is this for "christmas":</p>
+<p id="demo"></p>
+
+<p>The result of my function for what object is this for  4:</p>
+<p id="one"></p>
+
+<p>The result of my function for what object is this for true :</p>
+<p id="two"></p>
+
+
+<script>
+function gettype(x){
+  
+ return typeof x;
+}
+document.getElementById("demo").innerHTML = gettype("christmas");
+document.getElementById("one").innerHTML = gettype(4);
+document.getElementById("two").innerHTML = gettype(true);
+</script>
+</body>
+
+
+</html>

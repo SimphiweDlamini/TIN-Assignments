@@ -1,0 +1,43 @@
+<html>
+<head>
+</head>
+<body>
+<p>The result of my function for binary search of 11 in [3,16,1,54,87,58,11,64,2]:</p>
+<p id="demo"></p>
+
+<script>
+function binary(val,x,front,back){
+  var temp;
+  for(let i=0;i<x.length;i++){
+   for(let j=1+i;j<x.length;j++){
+      if(x[i]>x[j]){
+	     temp= x[i];
+		 x[i] = x[j];
+		 x[j] = temp;
+	  }
+   }
+   }
+   
+   let mid = Math.floor((front+back)/2);
+   
+   if(front>back){
+   return false;
+   }
+      if(val === x[mid]){
+	   return true;
+	  }
+	  if(val>x[mid]){
+	     return binary(val,x,mid+1,back);
+	  }
+	  if(val<x[mid]){
+	     return binary(val,x,front,mid-1);
+	  }
+   
+}
+var container= [3,16,1,54,87,58,11,64,2];
+document.getElementById("demo").innerHTML = binary(11,container,0,(container.length-1));
+</script>
+</body>
+
+
+</html>

@@ -1,0 +1,22 @@
+<html>
+<head>
+</head>
+<body>
+<p>The result of my function !10:</p>
+<p id="demo"></p>
+
+<script>
+function fact(x){
+var result=1;
+while(x > 0){
+  result=result*x;
+  x--;
+}
+return result;
+}
+document.getElementById("demo").innerHTML = fact(10);
+</script>
+</body>
+
+
+</html>

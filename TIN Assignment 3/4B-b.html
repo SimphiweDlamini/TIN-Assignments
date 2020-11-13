@@ -1,0 +1,33 @@
+<html>
+<head>
+</head>
+<body>
+<p>The result of my function fibbonacci 10:</p>
+<p id="demo"></p>
+
+<script>
+function fibo(x){
+  var n=1;
+  var result;
+  var first=0;
+	  var second=1;
+ if (x === 1){
+    return 0;
+ }else if(x===2){
+   return 1;   
+ }else 
+ {
+   for(let i=2;i<x;i++){
+	  result=first+second;
+	  first=second;
+	  second=result;
+   }
+ }
+ return result;
+}
+document.getElementById("demo").innerHTML = fibo(10);
+</script>
+</body>
+
+
+</html>

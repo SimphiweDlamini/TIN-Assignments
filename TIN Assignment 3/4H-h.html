@@ -1,0 +1,32 @@
+<html>
+<head>
+</head>
+<body>
+<p>The result of my function for second large and small with (4,5,2,7,9,1):</p>
+<p id="demo"></p>
+
+<script>
+function secondlarsmall(...x){
+  var temp;
+  for(let i=0;i<x.length;i++){
+   for(let j=1+i;j<x.length;j++){
+      if(x[i]>x[j]){
+	     temp= x[i];
+		 x[i] = x[j];
+		 x[j] = temp;
+	  }
+   }
+   
+     var secondlargest=x[x.length-2];
+	 var secondsmallest=x[1];
+	 
+  }
+ return secondlargest + ' and ' + secondsmallest;
+}
+var arr=[4,5,2,7,9,1];
+document.getElementById("demo").innerHTML = secondlarsmall(...arr);
+</script>
+</body>
+
+
+</html>

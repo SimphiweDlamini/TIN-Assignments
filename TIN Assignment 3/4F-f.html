@@ -1,0 +1,32 @@
+<html>
+<head>
+</head>
+<body>
+<p>The result of my function prime 23:</p>
+<p id="demo"></p>
+
+<script>
+function prime(x){
+  if(x<=1){
+  return false;
+  }
+  if(x=== 2){
+  
+  return true;
+  }
+  
+  for (let i=2;i<x;i++){
+    if(x % i === 0){
+	return false;
+	}else{
+	return true;
+	}
+  }
+ 
+}
+document.getElementById("demo").innerHTML = prime(23);
+</script>
+</body>
+
+
+</html>

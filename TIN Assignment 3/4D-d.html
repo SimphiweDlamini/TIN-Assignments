@@ -1,0 +1,30 @@
+<html>
+<head>
+</head>
+<body>
+<p>The result of my function for string christmas:</p>
+<p id="demo"></p>
+
+<script>
+function alpha(x){
+  var arr=x.split("");
+  var min;
+  for(let i=0;i<arr.length;i++){
+   for(let j=1+i;j<arr.length;j++){
+      if(arr[i]>arr[j]){
+	     min= arr[i];
+		 arr[i] = arr[j];
+		 arr[j] = min;
+	  }
+   }
+  }
+  
+   var result = arr.join('');
+ return result;
+}
+document.getElementById("demo").innerHTML = alpha("christmas");
+</script>
+</body>
+
+
+</html>

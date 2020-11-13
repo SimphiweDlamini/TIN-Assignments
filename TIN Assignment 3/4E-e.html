@@ -1,0 +1,26 @@
+<html>
+<head>
+</head>
+<body>
+<p>The result of my function for string "I am here to today":</p>
+<p id="demo"></p>
+
+<script>
+function longword(x){
+  var arr=x.split(' ');
+  var longw=0;
+  for(let i=1;i<arr.length;i++){
+     if(arr[i].length > arr[longw].length){
+	    longw=i;
+	 }
+  }
+  var result = arr[longw];
+  
+ return result;
+}
+document.getElementById("demo").innerHTML = longword("I am here today");
+</script>
+</body>
+
+
+</html>

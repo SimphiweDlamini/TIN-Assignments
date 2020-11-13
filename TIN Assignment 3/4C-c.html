@@ -1,0 +1,31 @@
+<html>
+<head>
+</head>
+<body>
+<p>The result of my function palindrome check for string razar:</p>
+<p id="demo"></p>
+
+<script>
+function pali(x){
+  var arr=x.split("");
+  var temp;
+  
+  for (let i=0;i<(arr.length/2);i++){
+     temp=arr[i];
+	 arr[i]=arr[arr.length-(i+1)];
+	 arr[arr.length-(i+1)]= temp;
+  }
+  
+  var comp = arr.join('');
+  var result = false;
+  if(x === comp){
+     result = true;
+  }
+ return result;
+}
+document.getElementById("demo").innerHTML = pali("razar");
+</script>
+</body>
+
+
+</html>

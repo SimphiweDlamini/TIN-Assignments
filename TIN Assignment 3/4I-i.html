@@ -1,0 +1,35 @@
+<html>
+<head>
+</head>
+<body>
+<p>The result of my function for finding coins from 89:</p>
+<p id="demo"></p>
+
+<script>
+function gencoins(x,val){
+  
+  if (x === 0) 
+  {
+     return [];
+   } 
+ else
+   {
+     if (amount >= val[0]) 
+       {
+         change = (amount - val[0]);
+        return [val[0]].concat(gencoins(change,val));
+        } 
+      else
+        {
+         coins.shift();
+         return gencoins(x,val);
+        }
+    }
+}
+var arr=[25,10,5,2,1];
+document.getElementById("demo").innerHTML = gencoins(89,arr);
+</script>
+</body>
+
+
+</html>
