@@ -1,0 +1,47 @@
+<html>
+<head>
+</head>
+<body>
+<p>Third function for JS Continued:</p>
+
+<script>
+ function Student(name,surname,id,...x){
+   this.name=name;
+   this.surname=surname;
+   this.id=id;
+   this.x=x;
+   this.val=0;
+   this.displayInfo= function(){
+      var div = x.length;
+    for(let i=0;i<this.x.length;i++){
+	   this.val += this.x[i];
+	}
+	this.val/=div;
+	return console.log('Student information : Name = '+this.name+', Surname = '+this.surname+', Average Grade = '+this.val);
+   }
+ }
+ 
+ Student.prototype.listofcourses = ["English","History","Geography","Mathematics"];
+ Student.prototype.moreInfo = function(){
+ this.displayInfo();
+ return console.log('Student information : Name = '+this.name+', Surname = '+this.surname+', Average Grade = '+this.val +', Courses they can take = ' + this.listofcourses);
+ }
+ 
+ var myStudent;
+ var anotherStudent;
+ function makeStudents(){
+ myStudent = new Student("Sim","Dlamini",12345,67,56,70,66,61);
+ anotherStudent = new Student("Ntoko","Ndabandaba",54321,76,62,83,73,46);
+ }
+ 
+ makeStudents();
+ myStudent.moreInfo();
+ anotherStudent.moreInfo();
+ 
+ 
+
+</script>
+</body>
+
+
+</html>

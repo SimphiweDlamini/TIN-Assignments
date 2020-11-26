@@ -1,0 +1,55 @@
+<html>
+<head>
+</head>
+<body>
+<p>Fourth function for JS Continued:</p>
+
+<script>
+ function Student(name,surname,id,...x){
+   this.name=name;
+   this.surname=surname;
+   this.id=id;
+   this.x=x;
+   this.displayInfo= function(){
+      var div = x.length;
+	  var val=0;
+    for(let i=0;i<this.x.length;i++){
+	   val += this.x[i];
+	}
+	val/=div;
+	return console.log('Student information : Name = '+this.name+', Surname = '+this.surname+', Average Grade = '+val);
+   }
+   this.getAveragegrade=function (){
+    var div = x.length;
+	  var val=0;
+    for(let i=0;i<this.x.length;i++){
+	   val += this.x[i];
+	}
+	val/=div;
+      return console.log(val);
+   }
+   this.getfullname=function (){
+    return console.log(this.name+ ' '+this.surname);
+   }
+   this.setfullname=function (d,f){
+      this.name=d;
+	  this.surname=f;
+   }
+   
+ }
+ 
+ var myStudent = new Student("Sim","Dlamini",12345,67,56,70,66,61);
+ 
+ myStudent.getAveragegrade();
+ myStudent.getfullname();
+ myStudent.setfullname("Simphiwe","Tshabalala");
+ myStudent.getfullname();
+ 
+ 
+ 
+
+</script>
+</body>
+
+
+</html>

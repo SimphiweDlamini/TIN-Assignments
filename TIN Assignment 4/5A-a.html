@@ -1,0 +1,30 @@
+<html>
+<head>
+</head>
+<body>
+<p>First function for JS Continued:</p>
+
+<script>
+ let myObject = {
+  name : "Simphiwe",
+  age : 21,
+  surname : "Dlamini",
+  
+  showPerson: function(){
+    console.log(name + ' ' + surname );
+  },
+  
+  showAge: function(){
+    console.log(age);
+  }
+}
+
+function readObject(x){
+ return 'type for name :' + typeof x.name +', surname: ' + typeof x.surname + ', age: ' + typeof x.age + ', showPerson: ' + typeof x.showPerson + ', showAge: ' + typeof x.showAge;
+}
+console.log(readObject(myObject));
+</script>
+</body>
+
+
+</html>
