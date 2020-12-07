@@ -1,0 +1,59 @@
+<html>
+    <head>
+        <link rel="stylesheet" href="TIN 6 D.css">
+    </head>
+    <body>
+        <p>Please Enter your details in the form below</p>
+        <br>
+        <form>
+            <label for="name">Name:</label><br>
+     <input type="text" id="name" name="name"><br>
+	 <label for="sname">Surname:</label><br>
+     <input type="text" id="sname" name="sname"><br>
+     <label for="age">Age:</label><br>
+     <input type="text" id="age" name="age"><br>
+	 <label for="email">Email:</label><br>
+     <input type="text" id="email" name="email"><br>
+     <input type="button" value="Submit" onclick="addData()"><br>
+
+        </form>
+        <br>
+        <table id="data" style="width: 50%;">
+            <tr>
+                <th>Name</th>
+                <th>Surname</th>
+                <th>Age</th>
+                <th>Email</th>
+            </tr>
+        </table>
+
+        <script>
+          function addData(){
+              var name = document.getElementById("name").value;
+              var sname = document.getElementById("sname").value;
+              var age = document.getElementById("age").value;
+              var email = document.getElementById("email").value;
+             
+              var mytable = document.getElementById("data");
+              var row = mytable.insertRow(-1);
+
+              var rname = row.insertCell(0);
+              var rsname = row.insertCell(1);
+              var rage = row.insertCell(2);
+              var remail= row.insertCell(3);
+
+              rname.innerHTML = name;
+           
+            rsname.innerHTML = sname;
+           
+            rage.innerHTML = age;
+            
+            remail.innerHTML = email;
+
+              
+          }
+
+         
+        </script>
+    </body>
+</html>

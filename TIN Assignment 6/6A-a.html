@@ -1,0 +1,37 @@
+<html>
+<head>
+</head>
+<body>
+    <p>
+        Conversion between Farenheit and Celsius
+    </p>
+    <form>
+        <label for="Farenheit">Enter Farenheit:</label><br>
+        <input type="text" id="Farenheit" name="Farenheit"><br>
+        <input type="button" value="Convert" onclick="getFVal()"><br>
+        <br>
+        <label for="Celsius">Enter Celsius</label><br>
+        <input type="text" id="Celsius" name="Celsius"><br>
+        <input type="button" value="Convert" onclick="getCVal()"><br>
+        <br>
+
+        <textarea id="answer" name="answer" rows="4" col="50">Your conversion will be shown here </textarea>
+    </form>
+    <script>
+        function getFVal(){
+            var num = document.getElementById("Farenheit").value;
+            var result = (num-32)*(5/9);
+
+            document.getElementById("answer").value = result + ' celsius';
+            
+        }
+        function getCVal(){
+            var num = document.getElementById("Celsius").value;
+            var result = (num*(9/5)) + 32;
+            
+            document.getElementById("answer").value = result + ' fahrenheit';
+        }
+    </script>
+</body>
+
+</html>

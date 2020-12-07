@@ -1,0 +1,49 @@
+<html>
+    <head></head>
+    <body>
+        <p>Please Enter your details in the form below</p>
+        <br>
+        <form>
+            <label for="name">Name:</label><br>
+     <input type="text" id="name" name="name"><br>
+	 <label for="sname">Surname:</label><br>
+     <input type="text" id="sname" name="sname"><br>
+     <label for="age">Age:</label><br>
+     <input type="text" id="age" name="age"><br>
+	 <label for="email">Email:</label><br>
+     <input type="text" id="email" name="email"><br>
+     <input type="button" value="Submit" onclick="doMe()"><br>
+
+        </form>
+        <br>
+        <p id="response">Have you filled out the form correctly = </p>
+
+        <script>
+          function checkForm(){
+              var name = document.getElementById("name").value;
+              var sname = document.getElementById("sname").value;
+              var age = document.getElementById("age").value;
+              var email = document.getElementById("email").value;
+              var regex = /\S+@\S+\.\S+/;
+              var decision = true;
+
+              if(name==null || name.length > 20){ decision = false;}
+              if(sname==null || sname.length > 30){decision =false;}
+              if(age==null || age < 1 ){
+                  decision = false;
+                  alert("It is mandatory to include you age here");
+              }
+              if(!(regex.test(email)) || email == null){
+                  decision = false;
+              }
+              return decision;
+          }
+
+          function doMe(){
+          var answer = document.getElementById("response");
+          answer.innerHTML="Have you filled out the form correctly = ";
+          var add= document.createTextNode(checkForm());
+          answer.appendChild(add);}
+        </script>
+    </body>
+</html>
